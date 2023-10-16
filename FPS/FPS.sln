@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject", "Zenject.csproj", "{7914bf82-0496-5731-90d4-4bf71a89b87a}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-Editor", "Zenject-Editor.csproj", "{19c32c71-4289-65b2-2b7b-7f5c6a4314ea}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7914bf82-0496-5731-90d4-4bf71a89b87a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7914bf82-0496-5731-90d4-4bf71a89b87a}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19c32c71-4289-65b2-2b7b-7f5c6a4314ea}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19c32c71-4289-65b2-2b7b-7f5c6a4314ea}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
