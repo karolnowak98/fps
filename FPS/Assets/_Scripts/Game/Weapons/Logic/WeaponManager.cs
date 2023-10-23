@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Zenject;
 using FPS.Core.Input.Logic;
-using FPS.Game.Player.Data;
+using FPS.Game.Input.Logic;
 using FPS.Game.Weapons.Data;
 using FPS.Game.Weapons.Enums;
 using FPS.Game.Weapons.Logic.Interfaces;

@@ -1,5 +1,6 @@
 ﻿using Zenject;
 using FPS.Core.Input.Logic;
+using FPS.Game.Input.Logic;
 
 namespace FPS.Core.Initializer
 {

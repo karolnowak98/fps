@@ -2,8 +2,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Zenject;
+using FPS.Core.Input.Logic;
 
-namespace FPS.Core.Input.Logic
+namespace FPS.Game.Input.Logic
 {
     public class InputManager : IInitializable, IDisposable
     {
@@ -16,7 +17,8 @@ namespace FPS.Core.Input.Logic
         public event Action OnBtn1Pressed;
         public event Action OnBtn2Pressed;
         public event Action OnBtn3Pressed;
-        public event Action OnBtnRPressed;
+        public event Action OnRPressed;
+        public event Action OnPPressed;
         public event Action OnSpacePressed;
         public event Action OnScrollUp;
         public event Action OnScrollDown;
@@ -30,7 +32,8 @@ namespace FPS.Core.Input.Logic
             _controls.Gameplay.Btn1.started += _ => OnBtn1Pressed?.Invoke();
             _controls.Gameplay.Btn2.started += _ => OnBtn2Pressed?.Invoke();
             _controls.Gameplay.Btn3.started += _ => OnBtn3Pressed?.Invoke();
-            _controls.Gameplay.BtnR.started += _ => OnBtnRPressed?.Invoke();
+            _controls.Gameplay.R.started += _ => OnRPressed?.Invoke();
+            _controls.Gameplay.P.started += _ => OnPPressed?.Invoke();
             _controls.Gameplay.Space.started += _ => OnSpacePressed?.Invoke();
             _controls.Gameplay.Move.performed += x => MoveAxis = x.ReadValue<Vector2>();
             _controls.Gameplay.Move.canceled += _ =>  MoveAxis = Vector2.zero;

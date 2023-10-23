@@ -60,7 +60,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "BtnR",
+                    "name": "R",
                     "type": "Button",
                     "id": "4b7ea6a2-fe39-4b44-b213-e64c7edcafd5",
                     "expectedControlType": "Button",
@@ -72,6 +72,15 @@
                     "name": "Space",
                     "type": "Button",
                     "id": "6c9e7f6b-7f64-4555-808e-66013cc95f79",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "P",
+                    "type": "Button",
+                    "id": "ca4dbef3-156a-4a6f-aff2-7351e3dce067",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -251,7 +260,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "BtnR",
+                    "action": "R",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -263,6 +272,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Space",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6de2eb79-b2a1-4adc-866a-82b08140e35b",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "P",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

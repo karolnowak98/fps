@@ -2,6 +2,7 @@
 using UnityEngine;
 using Zenject;
 using FPS.Core.Input.Logic;
+using FPS.Game.Input.Logic;
 using FPS.Game.Props.Data;
 using FPS.Game.Props.Logic;
 using Object = UnityEngine.Object;
@@ -27,7 +28,7 @@ namespace FPS.Game.Weapons.Logic
 
             _inputManager.OnLmbPerformed += StartShooting;
             _inputManager.OnLmbCanceled += StopShooting;
-            _inputManager.OnBtnRPressed += StartReload;
+            _inputManager.OnRPressed += StartReload;
 
             if (Camera.main != null)
             {

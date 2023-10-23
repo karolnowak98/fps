@@ -84,7 +84,7 @@ namespace FPS.Core.Input.Logic
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""BtnR"",
+                    ""name"": ""R"",
                     ""type"": ""Button"",
                     ""id"": ""4b7ea6a2-fe39-4b44-b213-e64c7edcafd5"",
                     ""expectedControlType"": ""Button"",
@@ -96,6 +96,15 @@ namespace FPS.Core.Input.Logic
                     ""name"": ""Space"",
                     ""type"": ""Button"",
                     ""id"": ""6c9e7f6b-7f64-4555-808e-66013cc95f79"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""P"",
+                    ""type"": ""Button"",
+                    ""id"": ""ca4dbef3-156a-4a6f-aff2-7351e3dce067"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -275,7 +284,7 @@ namespace FPS.Core.Input.Logic
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""BtnR"",
+                    ""action"": ""R"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -287,6 +296,17 @@ namespace FPS.Core.Input.Logic
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Space"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6de2eb79-b2a1-4adc-866a-82b08140e35b"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""P"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -303,8 +323,9 @@ namespace FPS.Core.Input.Logic
             m_Gameplay_Btn2 = m_Gameplay.FindAction("Btn2", throwIfNotFound: true);
             m_Gameplay_Btn3 = m_Gameplay.FindAction("Btn3", throwIfNotFound: true);
             m_Gameplay_Scroll = m_Gameplay.FindAction("Scroll", throwIfNotFound: true);
-            m_Gameplay_BtnR = m_Gameplay.FindAction("BtnR", throwIfNotFound: true);
+            m_Gameplay_R = m_Gameplay.FindAction("R", throwIfNotFound: true);
             m_Gameplay_Space = m_Gameplay.FindAction("Space", throwIfNotFound: true);
+            m_Gameplay_P = m_Gameplay.FindAction("P", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -370,8 +391,9 @@ namespace FPS.Core.Input.Logic
         private readonly InputAction m_Gameplay_Btn2;
         private readonly InputAction m_Gameplay_Btn3;
         private readonly InputAction m_Gameplay_Scroll;
-        private readonly InputAction m_Gameplay_BtnR;
+        private readonly InputAction m_Gameplay_R;
         private readonly InputAction m_Gameplay_Space;
+        private readonly InputAction m_Gameplay_P;
         public struct GameplayActions
         {
             private @Controls m_Wrapper;
@@ -382,8 +404,9 @@ namespace FPS.Core.Input.Logic
             public InputAction @Btn2 => m_Wrapper.m_Gameplay_Btn2;
             public InputAction @Btn3 => m_Wrapper.m_Gameplay_Btn3;
             public InputAction @Scroll => m_Wrapper.m_Gameplay_Scroll;
-            public InputAction @BtnR => m_Wrapper.m_Gameplay_BtnR;
+            public InputAction @R => m_Wrapper.m_Gameplay_R;
             public InputAction @Space => m_Wrapper.m_Gameplay_Space;
+            public InputAction @P => m_Wrapper.m_Gameplay_P;
             public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -411,12 +434,15 @@ namespace FPS.Core.Input.Logic
                     @Scroll.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnScroll;
                     @Scroll.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnScroll;
                     @Scroll.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnScroll;
-                    @BtnR.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBtnR;
-                    @BtnR.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBtnR;
-                    @BtnR.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnBtnR;
+                    @R.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnR;
+                    @R.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnR;
+                    @R.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnR;
                     @Space.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSpace;
                     @Space.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSpace;
                     @Space.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSpace;
+                    @P.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnP;
+                    @P.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnP;
+                    @P.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnP;
                 }
                 m_Wrapper.m_GameplayActionsCallbackInterface = instance;
                 if (instance != null)
@@ -439,12 +465,15 @@ namespace FPS.Core.Input.Logic
                     @Scroll.started += instance.OnScroll;
                     @Scroll.performed += instance.OnScroll;
                     @Scroll.canceled += instance.OnScroll;
-                    @BtnR.started += instance.OnBtnR;
-                    @BtnR.performed += instance.OnBtnR;
-                    @BtnR.canceled += instance.OnBtnR;
+                    @R.started += instance.OnR;
+                    @R.performed += instance.OnR;
+                    @R.canceled += instance.OnR;
                     @Space.started += instance.OnSpace;
                     @Space.performed += instance.OnSpace;
                     @Space.canceled += instance.OnSpace;
+                    @P.started += instance.OnP;
+                    @P.performed += instance.OnP;
+                    @P.canceled += instance.OnP;
                 }
             }
         }
@@ -457,8 +486,9 @@ namespace FPS.Core.Input.Logic
             void OnBtn2(InputAction.CallbackContext context);
             void OnBtn3(InputAction.CallbackContext context);
             void OnScroll(InputAction.CallbackContext context);
-            void OnBtnR(InputAction.CallbackContext context);
+            void OnR(InputAction.CallbackContext context);
             void OnSpace(InputAction.CallbackContext context);
+            void OnP(InputAction.CallbackContext context);
         }
     }
 }

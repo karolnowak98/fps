@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Zenject;
 using FPS.Core.Input.Logic;
+using FPS.Game.Input.Logic;
 using FPS.Game.Player.Data;
 
 namespace FPS.Game.Player.Logic
