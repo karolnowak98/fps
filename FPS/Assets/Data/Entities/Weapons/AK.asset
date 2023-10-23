@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f8005c5d2f4c75bbd26f04875869cc, type: 3}
+  m_Name: AK
+  m_EditorClassIdentifier: 
+  _id: 1
+  _type: 1
+  _prefab: {fileID: 1369102897581523165, guid: d0f30baa806635d4e98b2ba53f82baf3, type: 3}
+  _icon: {fileID: 21300044, guid: 6674e8c43c63e4f4184cbd009379498d, type: 3}
+  _ammoIcon: {fileID: 21300004, guid: 5163ae49a0de665458bba61cd20c99b1, type: 3}
+  _bulletImpactParticle: {fileID: 19800002, guid: ca78c635fc80e8342b38aab324a3d3a8, type: 3}
+  _damage: 20
+  _destroyMaterials: 0000000004000000
+  _shootCooldown: 0.08
+  _range: 50
+  _isRapidFire: 1
+  _numberOfMagazines: 4
+  _numberOfBulletsInMagazine: 30
+  _reloadTime: 1.5

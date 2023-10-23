@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f8005c5d2f4c75bbd26f04875869cc, type: 3}
+  m_Name: Shotgun
+  m_EditorClassIdentifier: 
+  _id: 2
+  _type: 2
+  _prefab: {fileID: 5248069527505826781, guid: 11e026101abcbbe44836bddf9887d02f, type: 3}
+  _icon: {fileID: 21300012, guid: 6674e8c43c63e4f4184cbd009379498d, type: 3}
+  _ammoIcon: {fileID: 21300018, guid: 5163ae49a0de665458bba61cd20c99b1, type: 3}
+  _bulletImpactParticle: {fileID: 19800002, guid: caa8bd0d2623acf4d915f16e0ab71218, type: 3}
+  _damage: 40
+  _destroyMaterials: 010000000200000003000000
+  _shootCooldown: 1
+  _range: 5
+  _isRapidFire: 0
+  _numberOfMagazines: 2
+  _numberOfBulletsInMagazine: 6
+  _reloadTime: 2
